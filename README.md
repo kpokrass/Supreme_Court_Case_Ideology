@@ -45,8 +45,6 @@ The model created during this project employed bidirectional, recurrent layers w
 
 The baseline model achieved 45% accuracy on the test set and an average F1 score of 0.383, along with strong evidence of overfitting. To improve performance measures and curb overfitting, dropout and L2 regularization was utilized in subsequent itierations of the model. These strategies increased the accuracy to 53% and average F1 score to 0.41. The two confusion matricies below demonstrate the performance improvements between the baseline and final models.
 
-![](https://raw.githubusercontent.com/kpokrass/Supreme_Court_Case_Ideology/master/baseline_cf.png) ![](https://raw.githubusercontent.com/kpokrass/Supreme_Court_Case_Ideology/master/final_cf.png)
-
 <img src="rnn_cfs.png">
 
 ## Conclusion
