@@ -43,9 +43,9 @@ The model created during this project employed bidirectional, recurrent layers w
 
 <img src="https://raw.githubusercontent.com/kpokrass/review/master/self_review/rnn_schematic.png">
 
-The baseline model achieved 45% accuracy on the test set and an average F1 score of 0.383, along with strong evidence of overfitting. To improve performance measures and curb overfitting, dropout, early stopping, and L2 regularization was utilized in subsequent itierations of the model. These strategies increased the accuracy to 53% and average F1 score to 0.41. The two confusion matricies below demonstrate the performance improvements between the baseline and final models.
+The baseline model achieved 45% accuracy on the test set and an average F1 score of 0.383, along with strong evidence of overfitting. To improve performance measures and curb overfitting, dropout, early stopping, and L2 regularization was utilized in subsequent itierations of the model. These strategies increased the accuracy to 51% and average F1 score to 0.41. The two confusion matricies below demonstrate the performance improvements between the baseline and final models.
 
 <img src="rnn_cfs.png">
 
 ## Conclusion
-The recurrent, bidirectional neural network built during this project was able to classify the legal ideology of the case opinion author with 52% accuracy and an F1 score of 0.41. The model displayed strong evidence of overfitting despite multiple interventions and its performance was further hampered by class imbalances. Additional efforts to reduce overfitting and correcting class imbalances may yield performance improvements for the recurrent neural network developed in this project.
+The recurrent, bidirectional neural network built during this project was able to classify the legal ideology of the case opinion author with 51% accuracy and an F1 score of 0.41. The model displayed strong evidence of overfitting despite multiple interventions and its performance was further hampered by class imbalances. Additional efforts to reduce overfitting and correcting class imbalances may yield performance improvements for the recurrent neural network developed in this project.
