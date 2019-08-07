@@ -25,9 +25,9 @@ It is interesting to note that the Supreme Court remained relatively moderate un
 <img src="cases_and_dissents.png">
 
 
-As conservative and liberal ideologies are essentially polar opposites and a justice's term of service on the Supreme Court typically outlasts many executive and legislative terms, a justice nominated by a democratic majority
+_As conservative and liberal ideologies are essentially polar opposites and a justice's term of service on the Supreme Court typically outlasts many executive and legislative terms, a justice nominated by a democratic majority_
 
-As the graph above suggests, the Supreme Court is becoming more contentious and thus the importance of swing votes is growing.
+_As the graph above suggests, the Supreme Court is becoming more contentious and thus the importance of swing votes is growing._
 
 ## Word Vector Embedding
 This project utilized word vector embeddings to aid in the differentiation of the verbiage used by each legal ideology. This method transforms each word in a corpus (body of text) into a vector within an embedding space of _n_ dimensionality. The location of each word in the embedding space indicates its semantic relationship with the other words in the space. To put it a different way, the closer a word is to another word in the embedding space, the more similar these two words are semantically. The figure below helps illustrate this concept.
@@ -43,8 +43,9 @@ The model created during this project employed bidirectional, recurrent layers w
 
 <img src="https://raw.githubusercontent.com/kpokrass/review/master/self_review/rnn_schematic.png">
 
-The baseline model achieved 45% accuracy on the test set and an average F1 score of 0.383, along with strong evidence of overfitting. To improve performance measures and curb overfitting, dropout and L2 regularization was utilized in subsequent itierations of the model. These strategies increased the accuracy to 53% and average F1 score to 0.41. The two confusion matricies below demonstrate the performance improvements between the baseline and final models.
+The baseline model achieved 45% accuracy on the test set and an average F1 score of 0.383, along with strong evidence of overfitting. To improve performance measures and curb overfitting, dropout, early stopping, and L2 regularization was utilized in subsequent itierations of the model. These strategies increased the accuracy to 53% and average F1 score to 0.41. The two confusion matricies below demonstrate the performance improvements between the baseline and final models.
 
 <img src="rnn_cfs.png">
 
 ## Conclusion
+The recurrent, bidirectional neural network built during this project was able to classify the legal ideology of the case opinion author with 52% accuracy and an F1 score of 0.41. The model displayed strong evidence of overfitting despite multiple interventions and its performance was further hampered by class imbalances. Additional efforts to reduce overfitting and correcting class imbalances may yield performance improvements for the recurrent neural network developed in this project.
