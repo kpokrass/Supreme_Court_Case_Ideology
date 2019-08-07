@@ -1,5 +1,5 @@
 
-# Classification of Supreme Court Case Opinions by Legal Ideology
+<h1 align="center">Classification of Supreme Court Case Opinions by Legal Ideology</h1>
 
 ## Introduction
 The Supreme Court of the United States of America was established in 1789 as the highest federal judiciary. As of 1869, the court is composed of one Chief Justice and eight associate justices. These justices are nominated by the President of the United States and then need to be confirmed by a vote from the Senate in order to serve on the court. Cases brought before the court must pertain to federal/state law or they may concern executive/legislative actions subject to judicial review. Cases are decided by a simple majority of the judicial vote. The Supreme Court will then compose a document known as a "case opinion" explaining what factors lead to the ruling by the justices in the majority vote. A dissenting opinion is usually also composed explaining what factors lead justice's to vote against the majority if the judicial vote is not unanimous.
