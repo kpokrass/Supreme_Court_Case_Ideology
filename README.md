@@ -20,12 +20,9 @@ The legal ideology of a potential justice is an important factor during the nomi
 
 <img src="ideo_over_time.png">
 
-It is interesting to note that the Supreme Court remained relatively moderate until roughly 1937, after which its average ideology appears to flip between the extremes. As this has been interpreted as political strategy of Republicans and Democrates alike to influence the leaning of the Court, and thus the interpretation of law for cases brought before the Court, it is not surprising that the frequency of dissenting opinions has also increased. 
+It is interesting to note that the Supreme Court remained relatively moderate until roughly 1937, after which its average ideology appears to flip between the extremes. As this has been interpreted as political strategy of Republicans and Democrates alike to influence the leaning of the Court, and thus the interpretation of law, it is not surprising that the frequency of dissenting opinions has also increased. 
 
 <img src="cases_and_dissents.png">
-
-
-_As conservative and liberal ideologies are essentially polar opposites and a justice's term of service on the Supreme Court typically outlasts many executive and legislative terms, a justice nominated by a democratic majority_
 
 _As the graph above suggests, the Supreme Court is becoming more contentious and thus the importance of swing votes is growing._
 
