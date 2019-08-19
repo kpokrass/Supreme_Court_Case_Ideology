@@ -7,6 +7,8 @@ The Supreme Court of the United States of America was established in 1789 as the
 As cases brought before the Supreme Court are of high importance to the country as a whole and have the ability to affect millions of lives, it is an honor for a legal team to be able to argue a case before the court...and an even bigger honor to have the ruling go in their favor. Thus, it is important for legal teams to know the legal ideologies of the justices presiding over the court in order to construct an argument which appeals to that philosophy. There are multiple ways to classify the legal ideology of a justice, but most rely on interpretations of the justice's written works. Therefore, developing a model to analyze the written work of a justice would allow for a fast, automated, and unbiased method for determining their legal ideology and aid development of arguments for legal teams.
 
 ## Legal Ideological Scores
+Most justices can be classified according to their philosophy of law into three main categories; conservative, moderate, and liberal. Those that conform to a conservative philosophy adhere to the meaning of the law as it is written. Where as those subscribing to a liberal philosophy believe that written law is dynamic and open for interpretation. Those of the moderate philosophy fall somewhere in between. While this classification is an important factor during a justice’s nomination and confirmation, it is also used to anticipate how they will vote on the cases heard before the court.
+
 [Segal-Cover Scores](https://en.wikipedia.org/wiki/Segal%E2%80%93Cover_score) are one of the most widely used systems to determine the legal ideology of a person nominated to serve on the Supreme Court. The scores are based on the nominee's previous written work and range from 0 (most conservative) to 1 (most liberal). While this project used Segal-Cover scores to classify a justice as either conservative, moderate, or liberal, these scores were only given to justices beginning in 1937. Thus, the legal ideologies of justices serving prior to 1937 were imputed based on the ideology of the President who nominated them and by the median ideology of the Senate that confirmed their nomination. 
 
 | Ideology | Perspective | Segal-Cover Score |
@@ -24,9 +26,12 @@ It is interesting to note that the Supreme Court remained relatively moderate un
 
 <img src="cases_and_dissents.png">
 
-_As the graph above suggests, the Supreme Court is becoming more contentious and thus the importance of swing votes is growing._
+As the graph above suggests, the Supreme Court is becoming more contentious and thus the importance of swing votes is growing. Not only has the number of divided case decisions and dissenting opinions increased over the past several decades, but [recent studies have shown that justices are subject to in-group bias](http://epstein.wustl.edu/research/InGroupBias.pdf) where they are more likely to vote in favor of a party or group that reflects their legal ideology. Thus, being able to predict the legal philosophy of a potential “swing-vote judge” may allow legal teams to tailor their argument towards the subjects that are central to that justice’s ideology, effectively tipping the vote in their favor.
 
-## Word Vector Embedding
+## Modeling Legal Ideology from Case Opinions
+To predict the legal ideologies of supreme court justices, over 31,000 case opinions were collected for Supreme Court cases from 1789 to 2017. Segal and Cover scores were used as the ideological scores to classify the author of each case opinion as either conservative, moderate, or liberal. As these scores have only been calculated for justices serving after 1936, the ideological scores for the earlier justices were imputed based on the ideologies of their nominating president and the median ideology of the senate that confirmed their nomination. During this project,  a recurrent neural network was built utilizing word vector embeddings and bidirectional layers to learn the ideology of the case opinion’s author.
+
+### Word Vector Embedding
 This project utilized word vector embeddings to aid in the differentiation of the verbiage used by each legal ideology. This method transforms each word in a corpus (body of text) into a vector within an embedding space of _n_ dimensionality. The location of each word in the embedding space indicates its semantic relationship with the other words in the space. To put it a different way, the closer a word is to another word in the embedding space, the more similar these two words are semantically. The figure below helps illustrate this concept.
 
 <img src="https://raw.githubusercontent.com/kpokrass/review/master/self_review/cosine_sim.png">
@@ -35,7 +40,7 @@ The words present in a random sample of 4,597 case opinions (with equal represen
 
 <img src="pca_all.png">
 
-## Recurrent Neural Network
+### Recurrent Neural Network
 The model created during this project employed bidirectional, recurrent layers within a deep neural network. The bidirectional, recurrent layers were selected as they excel at learning sequences of data, such as text documents. The figure below illustrates how these types of models work. Essentially, the text is presented to a neuron one word at a time. The neuron stores information about the words it has seen to better inform its prediction based on the next word presented to it. The bidirectional component passes the text document through the network layer in both directions, beginning-to-end and end-to-beginning. This allows the model to better learn the context of the words in the text sequences, ultimately leading to increased prediction accuracy.
 
 <img src="https://raw.githubusercontent.com/kpokrass/review/master/self_review/rnn_schematic.png">
